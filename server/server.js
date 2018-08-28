@@ -43,7 +43,7 @@ io.on('connection', (socket) => {
 
     //io emits to every single connection; socket emits to only a single connection
     io.emit('newMessage', generateMessage(message.from, message.text));
-    callback('This is from the server');
+    callback();
     // socket.broadcast.emit('newMessage', {
     //   from: message.from,
     //   text: message.text,
